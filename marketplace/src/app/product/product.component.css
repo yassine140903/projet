@@ -1,0 +1,131 @@
+body, html {
+    height: 100%; /* Full height for centering */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Ensure a modern font */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.product-main {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Space between product gallery and details */
+    align-items: flex-start; /* Align items at the start */
+    gap: 100px;
+}
+
+
+
+.product-page {
+    padding: 20px;
+  }
+  
+ 
+  
+  .main-image {
+    width: 500px; /* Increased width */
+    height: 400px; /* Increased height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border: 1px solid #ddd; /* Existing border style */
+    margin-bottom: 15px; /* Space below the image */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.thumbnail-gallery img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    object-fit: cover;
+    border-radius: 4px; /* Rounded corners */
+}
+  .thumbnail-gallery img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+  }
+  
+  .product-details {
+    max-width: 400px;
+    padding: 10px;
+}
+  
+.product-details h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+  
+.price {
+    color: rgb(215, 176, 117);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+  
+  .add-to-cart-btn {
+    background-color: rgb(215, 176, 117);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #bfa66d;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+  
+  .product-description {
+    margin-top: 40px;
+  }
+  
+ 
+
+
+  .nav-button {
+    background-color: transparent; /* Transparent background */
+    color: gray; /* Arrow color */
+    border: none; /* Remove border */
+    font-size: 36px; /* Increase font size for larger arrows */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+    opacity: 0; /* Initially hidden */
+    position: absolute; /* Position buttons absolutely */
+    top: 40%; /* Adjust this value to move arrows higher */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    z-index: 1; /* Ensure buttons are above other elements */
+}
+
+.prev-button {
+    left: 10px; /* Position left arrow */
+}
+
+.next-button {
+    right: 10px; /* Position right arrow */
+}
+
+.product-gallery:hover .nav-button {
+    opacity: 1; /* Show buttons on hover */
+    transition: opacity 0.3s; /* Smooth transition for showing */
+}
