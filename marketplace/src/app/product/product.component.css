@@ -1,7 +1,7 @@
 body, html {
-    height: 100%; /* Full height for centering */
-    margin: 0; /* Remove default margin */
-    font-family: Arial, sans-serif; /* Ensure a modern font */
+    height: 100%; 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
 }
 
 .container {
@@ -23,9 +23,9 @@ body, html {
 }
 
 .product-main {
-    display: flex; /* Use flexbox for layout */
-    gap: 20px; /* Space between product gallery and details */
-    align-items: flex-start; /* Align items at the start */
+    display: flex; 
+    gap: 20px; 
+    align-items: flex-start; 
     gap: 100px;
 }
 
@@ -38,13 +38,13 @@ body, html {
  
   
   .main-image {
-    width: 500px; /* Increased width */
-    height: 400px; /* Increased height */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
-    border: 1px solid #ddd; /* Existing border style */
-    margin-bottom: 15px; /* Space below the image */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 500px; 
+    height: 400px; 
+    object-fit: cover; 
+    border: 1px solid #ddd; 
+    margin-bottom: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnail-gallery img {
@@ -53,7 +53,7 @@ body, html {
     cursor: pointer;
     border: 1px solid #ddd;
     object-fit: cover;
-    border-radius: 4px; /* Rounded corners */
+    border-radius: 4px; 
 }
   .thumbnail-gallery img {
     width: 60px;
@@ -86,13 +86,13 @@ body, html {
     padding: 12px 24px;
     border: none;
     cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
     transition: background-color 0.3s, transform 0.2s;
 }
 
 .add-to-cart-btn:hover {
     background-color: #bfa66d;
-    transform: translateY(-2px); /* Lift effect on hover */
+    transform: translateY(-2px); 
 }
   
   .product-description {
@@ -103,29 +103,120 @@ body, html {
 
 
   .nav-button {
-    background-color: transparent; /* Transparent background */
-    color: gray; /* Arrow color */
-    border: none; /* Remove border */
-    font-size: 36px; /* Increase font size for larger arrows */
-    padding: 10px; /* Padding for button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: color 0.3s; /* Smooth transition for hover effect */
-    opacity: 0; /* Initially hidden */
-    position: absolute; /* Position buttons absolutely */
-    top: 40%; /* Adjust this value to move arrows higher */
-    transform: translateY(-50%); /* Adjust for vertical centering */
-    z-index: 1; /* Ensure buttons are above other elements */
+    background-color: transparent; 
+    color: gray; 
+    border: none; 
+    font-size: 36px; 
+    padding: 10px; 
+    cursor: pointer; 
+    transition: color 0.3s; 
+    opacity: 0; 
+    position: absolute; 
+    top: 40%; 
+    transform: translateY(-50%); 
+    z-index: 1; 
 }
 
 .prev-button {
-    left: 10px; /* Position left arrow */
+    left: 10px; 
 }
 
 .next-button {
-    right: 10px; /* Position right arrow */
+    right: 10px; 
 }
 
 .product-gallery:hover .nav-button {
-    opacity: 1; /* Show buttons on hover */
-    transition: opacity 0.3s; /* Smooth transition for showing */
+    opacity: 1; 
+    transition: opacity 0.3s; 
+}
+
+
+
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 40px; 
+    }
+
+    .product-main {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+    }
+
+    .main-image {
+        width: 100%; 
+        max-width: 500px; 
+        height: auto; 
+    }
+
+    .product-details {
+        max-width: 90%; 
+        padding: 10px; 
+    }
+
+    .nav-button {
+        font-size: 24px; 
+    }
+}
+
+@media (max-width: 992px) {
+    .product-details {
+        max-width: 80%; /
+    }
+
+    .thumbnail-gallery img {
+        width: 55px;
+        height: 55px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-button {
+        font-size: 20px; 
+    }
+
+    .main-image {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .thumbnail-gallery img {
+        width: 50px; 
+        height: 50px; 
+    }
+
+    .product-details {
+        max-width: 100%; 
+        padding: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-button {
+        font-size: 18px;
+    }
+
+    .main-image {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .thumbnail-gallery img {
+        width: 40px; 
+        height: 40px; 
+    }
+
+    .product-details h2 {
+        font-size: 22px; 
+    }
+
+    .price {
+        font-size: 18px; 
+    }
+
+    .add-to-cart-btn {
+        padding: 10px 20px; 
+    }
 }
