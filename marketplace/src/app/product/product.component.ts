@@ -30,7 +30,7 @@ export class ProductPageComponent {
     this.mainImage = image;
   }
 
-  addToCart() {
+  BuyNow() {
     console.log('Product added to cart:', this.product.name);
   }
 
